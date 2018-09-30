@@ -8,4 +8,7 @@ import java.util.List;
 @Repository
 public interface UserDao {
     List<User> getUsers();
+    void insertUser(User user);
+    void updateUser(User user);
+    void deleteUser(Integer id);
 }

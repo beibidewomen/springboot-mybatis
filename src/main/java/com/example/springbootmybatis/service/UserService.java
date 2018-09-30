@@ -18,4 +18,16 @@ public class UserService {
         List<User> users = userDao.getUsers();
         return  users;
     }
+
+    public void insertUser(User user) {
+        userDao.insertUser(user);
+    }
+
+    public void updateUser(User user) {
+        userDao.updateUser(user);
+    }
+
+    public void deleteUser(Integer id) {
+        userDao.deleteUser(id);
+    }
 }
