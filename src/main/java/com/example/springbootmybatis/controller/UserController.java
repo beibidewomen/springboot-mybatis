@@ -1,0 +1,23 @@
+package com.example.springbootmybatis.controller;
+
+
+import com.example.springbootmybatis.entity.User;
+import com.example.springbootmybatis.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+public class UserController {
+
+    @Autowired
+    public UserService userService;
+
+    @RequestMapping(value = "/getUser",method = RequestMethod.GET)
+    public List<User> getUser(){
+       return userService.getUsers();
+    }
+}
